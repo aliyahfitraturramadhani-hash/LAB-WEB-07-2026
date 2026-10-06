@@ -46,12 +46,9 @@ if (inputNama === null) {
     `);
 } else {
 
-// FUNCTION MENGHITUNG RATA-RATA
+// FUNCTION MENGHITUNG RATA-RATA (MENGGUNAKAN REDUCE)
 function hitungRataRata(nilaiTugas) {
-    let total = 0;
-    for (let i = 0; i < nilaiTugas.length; i++) {
-        total = total + nilaiTugas[i];
-    }
+    const total = nilaiTugas.reduce((acc, curr) => acc + curr, 0);
     return total / nilaiTugas.length;
 }
 
